@@ -1,12 +1,28 @@
-
 const express = require('express');
 const router = express.Router();
 
-router.get('/', (req,res) => {
+const db = require('../models')
 
-   
+router.get('/', (req,res) => {
     res.render('index')
 })
 
 
-module.exports = router;
+router.get('/nationalParks', async(req, res)=>{
+    try{
+        let records = await db.nationalParks.findAll();
+        records.forEach(obj => {
+            console.log(obj.parkName)})
+    }
+    catch(error){
+        console.log(error);
+    }
+})
+
+
+
+
+
+
+
+module.exports = router

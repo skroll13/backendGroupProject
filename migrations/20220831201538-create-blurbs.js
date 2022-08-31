@@ -1,20 +1,28 @@
 'use strict';
 module.exports = {
   async up(queryInterface, Sequelize) {
-    await queryInterface.createTable('nationalParks', {
+    await queryInterface.createTable('blurbs', {
       id: {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      parkName: {
-        type: Sequelize.STRING
+      userID: {
+        type: Sequelize.INTEGER,
+        references:{
+          model: 'users',
+          key: 'id'
+        }
       },
-      description: {
-        type: Sequelize.STRING
+      parkID: {
+        type: Sequelize.INTEGER,
+        references:{
+          model: 'nationalParks',
+          key: 'id'
+        }
       },
-      state: {
+      blurbContent: {
         type: Sequelize.STRING
       },
       createdAt: {
@@ -28,6 +36,6 @@ module.exports = {
     });
   },
   async down(queryInterface, Sequelize) {
-    await queryInterface.dropTable('nationalParks');
+    await queryInterface.dropTable('blurbs');
   }
 };

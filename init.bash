@@ -1,8 +1,9 @@
+
 sequelize model:generate --name users --attributes userName:string,password:string,userEmail:string
 
 
 
-sequelize model:generate --name nationalParks --attributes parkName:string,description:string,state:string
+sequelize model:generate --name nationalParks --attributes parkName:string,description:string,state:string,userID:integer
 
 
 
