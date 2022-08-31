@@ -23,19 +23,19 @@ app.use(express.json())
 //   })
 // )
 
-//middleware
+
+// //middleware
+
 // app.use(passport.initialize())
 // app.use(passport.session())
 
 //routes
 app.use(require('./routes/index.js'))
+app.use(require('./routes/nationalparks.js'))
 app.use(require('./routes/login.js'))
-
-app.use(require('./routes/nationalParks'))
 app.use(require('./routes/userInformation'))
 app.use(require('./routes/registration.js'))
-
-
+app.use(require('./routes/newBlurbEntry'))
 
 
 app.listen(port, () => {
