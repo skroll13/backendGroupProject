@@ -34,6 +34,9 @@ app.use(require('./routes/login.js'))
 // app.use(require('./routes/registration.js'))
 // app.use(require('./routes/roster.js'))
 
+
+app.use(require('./routes/newBlurbEntry'))
+
 app.listen(port, () => {
   console.log(`listening on port ${port}`)
 })
