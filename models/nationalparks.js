@@ -11,13 +11,14 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
-      models.roles.hasMany(models.nationalParks, {foreignKey: 'parkID'})
+      models.nationalParks.belongsTo(models.users, {foreignKey: 'userID'})
     }
   }
   nationalParks.init({
     parkName: DataTypes.STRING,
     description: DataTypes.STRING,
-    state: DataTypes.STRING
+    state: DataTypes.STRING,
+    userID: DataTypes.INTEGER
   }, {
     sequelize,
     modelName: 'nationalParks',

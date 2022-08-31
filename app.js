@@ -32,6 +32,7 @@ app.use(require('./routes/index.js'))
 app.use(require('./routes/blogs.js'))
 app.use(require('./routes/login.js'))
 app.use(require('./routes/registration.js'))
+app.use(require('./routes/registration.js'))
 // app.use(require('./routes/roster.js'))
 
 app.listen(port, () => {
