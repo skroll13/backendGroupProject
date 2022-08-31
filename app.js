@@ -30,8 +30,12 @@ app.use(express.json())
 //routes
 app.use(require('./routes/index.js'))
 app.use(require('./routes/login.js'))
+
 app.use(require('./routes/nationalParks'))
 app.use(require('./routes/userInformation'))
+app.use(require('./routes/registration.js'))
+
+
 
 
 app.listen(port, () => {
