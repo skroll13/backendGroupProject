@@ -8,7 +8,7 @@ const cookieSession = require('cookie-session')
 const port = 3000
 
 app.use(express.static('public'))
-// app.use(helmet())
+app.use(helmet())
 app.set('view engine', 'ejs')
 
 //scrapers
@@ -29,10 +29,10 @@ app.use(passport.session())
 
 //routes
 app.use(require('./routes/index.js'))
-app.use(require('./routes/blogs.js'))
 app.use(require('./routes/login.js'))
-app.use(require('./routes/registration.js'))
-// app.use(require('./routes/roster.js'))
+app.use(require('./routes/nationalParks'))
+app.use(require('./routes/userInformation'))
+
 
 app.listen(port, () => {
   console.log(`listening on port ${port}`)
