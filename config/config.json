@@ -1,9 +1,9 @@
 {
   "development": {
-    "username": "postgres",
-    "password": null,
-    "database": "parksIVisited",
-    "host": "127.0.0.1",
+    "username": "uuevrvpe",
+    "password": "hZ72Z2Nq52kptqc1s2vDzsgwPn9cuUsH",
+    "database": "uuevrvpe",
+    "host": "jelani.db.elephantsql.com",
     "dialect": "postgres"
   }
 }
